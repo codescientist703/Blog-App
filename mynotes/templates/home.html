@@ -1,0 +1,12 @@
+{% extends 'base.html' %} {% block content %}
+<h1 class="text-center mb-3 text-info font-weight-bold">Blog Posts</h1>
+
+{% for post in posts %}
+<div class>
+  <div class="jumbotron">
+    <h2 class="mb-3 font-weight-bold text-uppercase">{{post.title}}</h2>
+    <p class="text-muted">{{post.date}}</p>
+    <p class="text-break">{{post.content}}</p>
+  </div>
+</div>
+{% endfor %} {% endblock content %}
